@@ -15,6 +15,8 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
 Frame.Position = UDim2.new(0.254876465, 0, 0.423076987, 0)
 Frame.Size = UDim2.new(0, 377, 0, 225)
+Frame.Active = true
+Frame.Draggable = true
 
 UICorner.Parent = Frame
 
