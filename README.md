@@ -1,79 +1,63 @@
---- Close Button by Commando#6764
--- UI Made by Commando#6764
+
 
 local ScreenGui = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
+local loader = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
+local loadertext = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
-local load = Instance.new("TextButton")
+local loader_2 = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local close = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
 
 
 ScreenGui.Parent = game.CoreGui
 
-Main.Name = "Main"
-Main.Parent = ScreenGui
-Main.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
-Main.Position = UDim2.new(0.365603656, 0, 0.453846157, 0)
-Main.Size = UDim2.new(0, 266, 0, 254)
-Main.Active = true
-Main.Draggable = true
+loader.Name = "loader"
+loader.Parent = ScreenGui
+loader.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+loader.Position = UDim2.new(0.0801457167, 0, 0.564615369, 0)
+loader.Size = UDim2.new(0, 183, 0, 157)
 
-TextLabel.Parent = Main
-TextLabel.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-TextLabel.Size = UDim2.new(0, 266, 0, 51)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Loader"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+UICorner.Parent = loader
 
-UICorner.Parent = TextLabel
+loadertext.Name = "loader text"
+loadertext.Parent = loader
+loadertext.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+loadertext.Size = UDim2.new(0, 179, 0, 55)
+loadertext.Font = Enum.Font.SourceSans
+loadertext.Text = "DarkWare's Loader"
+loadertext.TextColor3 = Color3.fromRGB(170, 255, 0)
+loadertext.TextScaled = true
+loadertext.TextSize = 14.000
+loadertext.TextWrapped = true
 
-UICorner_2.Parent = Main
+UICorner_2.Parent = loadertext
 
-load.Name = "load"
-load.Parent = Main
-load.BackgroundColor3 = Color3.fromRGB(170, 255, 0)
-load.Position = UDim2.new(-3.7252903e-09, 0, 0.874015749, 0)
-load.Size = UDim2.new(0, 113, 0, 32)
-load.Font = Enum.Font.SourceSans
-load.Text = "Load me"
-load.TextColor3 = Color3.fromRGB(0, 0, 0)
-load.TextScaled = true
-load.TextSize = 14.000
-load.TextWrapped = true
-load.MouseButton1Down:connect(function()
+loader_2.Name = "loader"
+loader_2.Parent = loader
+loader_2.BackgroundColor3 = Color3.fromRGB(0, 0, 127)
+loader_2.Position = UDim2.new(0.145857915, 0, 0.559473872, 0)
+loader_2.Size = UDim2.new(0, 124, 0, 45)
+loader_2.Font = Enum.Font.SourceSans
+loader_2.Text = "Load"
+loader_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+loader_2.TextScaled = true
+loader_2.TextSize = 14.000
+loader_2.TextWrapped = true
+loader_2.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/selecteduseromg343/MacOsUI/main/README.md"))()
 end)
 
-UICorner_3.Parent = load
 
-close.Name = "close"
-close.Parent = Main
-close.BackgroundColor3 = Color3.fromRGB(170, 170, 0)
-close.Position = UDim2.new(0.526315808, 0, 0.838582695, 0)
-close.Size = UDim2.new(0, 126, 0, 41)
-close.Font = Enum.Font.SourceSans
-close.Text = "UI Is Loaded? Close"
-close.TextColor3 = Color3.fromRGB(0, 0, 0)
-close.TextScaled = true
-close.TextSize = 14.000
-close.TextWrapped = true
 
-UICorner_4.Parent = close
 
--- close button added
+UICorner_3.Parent = loader_2
 
-local function UBFA_fake_script() -- close.LocalScript 
-	local script = Instance.new('LocalScript', close)
+
+local function SUYSY_fake_script() -- loader_2.Script 
+	local script = Instance.new('Script', loader_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UBFA_fake_script)()
+coroutine.wrap(SUYSY_fake_script)()
